@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#"  lang="fr-fr">
+<head>
+	<base href="https://sga.ma/Formulaire-inscription-el-jadida/" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="école marocaine, école d'ingénieur, école de management, formation des ingénieurs, formation des managers, école supérieure marocaine, école de commerce, formation master, formation licence, formation professionnelle " />
+	<meta name="google-site-verification" content="Yv_ojucbyT8YHZmj40kpjg4kJBGT_5YRS5D9PQ6F-FE" />
+	<meta name="description" content="Rejoignez la grande école au cœur d'El Jadida, pré-inscrivez-vous!" />
+	<meta name="generator" content="www.sga.ma" />
+	<title>SGA Campus El Jadida- inscription</title>
+	<link href="/templates/sga/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/media/k2/assets/css/k2.fonts.css?v2.7.1" rel="stylesheet" type="text/css" media="none" />
+	<link href="/components/com_k2/css/k2.css?v2.7.1" rel="stylesheet" type="text/css" media="none" />
+	<link href="/media/com_rsform/css/front.css?6fe7cd6081fcc9ae5bfe8e822a69804c" rel="stylesheet" type="text/css" />
+	<link href="/templates/sga/css/system/sticky.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/sga/css/template.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/sga/css/system/pattern.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/sga/css/your_css.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/sga/asset/fonts/awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/sga/css/responsive.css" rel="stylesheet" type="text/css" />
+	<link href="/media/mod_social_slider/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="/modules/mod_rssearch/assets/css/rssearch.css" rel="stylesheet" type="text/css" />
+	<link href="/plugins/system/ytshortcodes/assets/css/shortcodes.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+.container{width:1170px}
+.jj_sl_navigation li a {
+			background-color:#777777;
+			text-align:left;
+			color:#ffffff !important;
+		}
+		.jj_sl_navigation .jj_sprite {
+			background-image: url(https://sga.ma/media/mod_social_slider/icons/sprite-white.png);
+		}.jj_sl_navigation { bottom:120px;
+			}.jj_sl_navigation .jj_sl_custom1 a:hover{
+			background-color: #d9450b;
+		 }
+		 .jj_sl_navigation .jj_sl_custom2 a:hover{
+			background-color: #000000;
+		 }
+		 .jj_sl_navigation .jj_sl_custom3 a:hover{
+			background-color: #000000;
+		 }
+		 .jj_sl_navigation .jj_sl_custom4 a:hover{
+			background-color: #000000;
+		 }
+		 .jj_sl_navigation .jj_sl_custom5 a:hover{
+			background-color: #000000;
+		 }
+				.jj_sl_navigation .jj_sprite_custom.jj_custom1 {
+					background-image: url(https://sga.ma/media/mod_social_slider/icons/instagram.png);
+				}
+				.jj_sl_navigation .jj_sprite_custom.jj_custom2 {
+					background-image: url(https://sga.ma/media/mod_social_slider/icons/icon.png);
+				}
+				.jj_sl_navigation .jj_sprite_custom.jj_custom3 {
+					background-image: url(https://sga.ma/media/mod_social_slider/icons/icon.png);
+				}
+				.jj_sl_navigation .jj_sprite_custom.jj_custom4 {
+					background-image: url(https://sga.ma/media/mod_social_slider/icons/icon.png);
+				}
+				.jj_sl_navigation .jj_sprite_custom.jj_custom5 {
+					background-image: url(https://sga.ma/media/mod_social_slider/icons/icon.png);
+				}
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"4fb1058e0458647ef14eab4266d76fde","system.paths":{"root":"","base":""}}</script>
+	</script>
+
+
+  for(var i=0;i<Formation[valeur].length;i++){
+    niveau_value.options[i].text = Formation[valeur][i];
+    niveau_value.options[i].value = Formation[valeur][i];
+} 
+}
+
+function dynamic2(Formation,Niveau,Option){
+var formationSelected = document.getElementById('Formation'); 
+var formation_valeur = formationSelected.options[formationSelected.selectedIndex].value;
+
+var niveauSelected = document.getElementById('Niveau'); 
+var niveau_valeur = niveauSelected.options[niveauSelected.selectedIndex].value;
+
+  var Niveau= new Array();
+
+if(formation_valeur=="Filière Ingénierie" && (niveau_valeur ==  "3ème année" || niveau_valeur =="4ème année" )){
+ document.getElementById('myOption').style.visibility="visible";
+  Niveau['3ème année'] = ['Ingénierie des Systèmes Informatiques'];
+  Niveau['4ème année'] = ['Architecture et Sécurité des Systèmes et réseaux Informatiques', 'Ingénierie Logicielle et Développement Web', 'Systèmes Informatique d’Aide à la Décision'];
+}
+else if(formation_valeur=="Filière Management" && (niveau_valeur ==  "3ème année" || niveau_valeur =="4ème année" )){
+ document.getElementById('myOption').style.visibility="visible";
+  Niveau['3ème année'] = ['Système d’Information Finance et Contrôle', 'Système d’Information Marketing et Commerce'];
+  Niveau['4ème année'] = ['Système d’Information Audit et Contrôle et Gestion', 'Système d’Information et Génie Financier', 'Système d’Information Marketing et Commerce'];
+}
+else{
+ document.getElementById('myOption').style.visibility="hidden";
+  Niveau['3ème année'] = [''];
+  Niveau['4ème année'] = [''];
+}
+
+var option_value = document.getElementById("Option");
+option_value.options.length = 0;
+
+  if (!Niveau[niveau_valeur]) niveau_valeur = '';
+  option_value.options.length = Niveau[niveau_valeur].length;
+  for(var i=0;i<Niveau[niveau_valeur].length;i++){
+
+    option_value.options[i].text = Niveau[niveau_valeur][i];
+    option_value.options[i].value = Niveau[niveau_valeur][i];
+} 
+}
+
+ </script>
+	<style type="text/css">
+body{
+	background:#AEE4FF;
+}
+#myOption{
+      visibility:hidden;
+}
+.form-style-10{
+	max-width:600px;
+	padding:30px;
+	margin:40px auto;
+	background: #FFF;
+	border-radius: 10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+.form-style-10 .inner-wrap{
+         width: 100%;
+	padding: 5px;
+	background: #F8F8F8;
+	border-radius: 6px;
+	margin-bottom: 15px;
+}
+
+.form-style-10 h1{
+	background: #df041c;
+	padding: 20px 30px 15px 30px;
+	margin: -30px -30px 30px -30px;
+	border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0; 
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+	font: normal 30px 'Bitter', serif;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid #257C9E;
+}
+.form-style-10 h1 > span{
+	display: block;
+	margin-top: 2px;
+	font: 13px Arial, Helvetica, sans-serif;
+}
+.form-style-10 .section{
+	font: normal 20px 'Bitter', serif;
+	color: #F78181;
+	margin-bottom: 5px;
+}
+.form-style-10 .section span {
+	background: #F78181;
+	padding: 5px 10px 5px 10px;
+	position: absolute;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border: 4px solid #fff;
+	font-size: 14px;
+	margin-left: -45px;
+	color: #fff;
+	margin-top: -3px;
+}
+
+.form-style-2 label{
+	display: block;
+	margin: 0px 0px 15px 0px;
+}
+.form-style-2 label > span{
+	width: 100px;
+	font-weight: bold;
+	float: left;
+	padding-top: 8px;
+	padding-right: 5px;
+}
+.form-style-2 span.required{
+	color:red;
+}
+.form-style-2 .tel-number-field{
+	width: 40px;
+	text-align: center;
+}
+.form-style-2 input.input-field{
+	width: 48%;
+	
+}
+
+.form-style-2 input.input-field, 
+.form-style-2 .tel-number-field, 
+.form-style-2 .textarea-field, 
+ .form-style-2 .select-field{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+        width: 100%;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	padding: 8px;
+	outline: none;
+        align : right;
+       
+}
+
+.form-style-2 .input-field:focus, 
+.form-style-2 .tel-number-field:focus, 
+.form-style-2 .textarea-field:focus,  
+.form-style-2 .select-field:focus{
+	border: 1px solid #0C0;
+}
+.form-style-2 .textarea-field{
+	height:100px;
+	width: 55%;
+}
+.form-style-2 input[type=submit],
+.form-style-2 input[type=button]{
+	border: none;
+	padding: 8px 15px 8px 15px;
+	background: #FF8500;
+	color: #fff;
+	box-shadow: 1px 1px 4px #DADADA;
+	-moz-box-shadow: 1px 1px 4px #DADADA;
+	-webkit-box-shadow: 1px 1px 4px #DADADA;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.form-style-2 input[type=submit]:hover,
+.form-style-2 input[type=button]:hover{
+	background: #EA7B00;
+	color: #fff;
+}
+
+</style>
+
+
+    <meta name="HandheldFriendly" content="true"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="YES" />
+   <!-- <meta http-equiv="content-type" content="text/html; charset=utf-8" />-->
+	
+		
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+	
+	<!-- META FOR IOS & HANDHELD -->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+		
+	<!-- LINK FOR FAVICON -->
+			<link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    	
+    
+	<!--For param enableGoogleAnalytics-->
+    </script>
+	
+
+ <!--<link rel="alternate" href="https://sga.ma/fr" hreflang="fr" />
+ <link rel="alternate" href="https://sga.ma/" hreflang="x-default" /> -->
+
+<!-- Global site tag (gtag.js) - Google AdWords: 880839273 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-880839273"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-880839273');
+</script>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '255016941590673'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1" 
+src="https://www.facebook.com/tr?id=255016941590673&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<!--script google analytics et optimze -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-T9BB7CG':true});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-76794330-1', 'auto');
+  ga('require', 'GTM-T9BB7CG');
+  ga('send', 'pageview');
+</script>
+<script async defer src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.2"></script>
+</script>
+</head>
+
+
+
+<body id="bd" class="home-layout1 res" >
+<div id="fb-root"></div>
+
+	
+	<div id="yt_wrapperc" class="layout-wide">
+
+		<nav id="yt_menuwrap" class="block">						<div class="container">
+							<div class="row">
+									<div id="yt_logo" class="col-md-3 col-sm-12"  >
+						
+			<a class="logo" href="/" title="SGA - ">
+				<img data-placeholder="no" src="https://sga.ma/templates/sga/images/styling/red/logo.png" alt="SGA - " style="width:246px;height:86px;"  />
+			</a>
+           
+                </div>
+				<div id="yt_mainmenu" class="col-md-9 col-sm-12 "  >
+			<ul id="meganavigator" class="clearfix navi "><li class="level1 first havechild ">
+	<a title="Groupe SGA" class="level1 first havechild  item-link" href="#"><span class="menu-title">Groupe SGA</span></a>	
+			<!-- open mega-content div -->
+		<div class="level2 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level2"><li class="level2 first ">
+	<a title="Présentation" class="level2 first  item-link" href="/groupesga/ecole-superieure-marocaine"><span class="menu-title">Présentation</span></a>	
+	</li>
+
+<li class="level2 havechild ">
+	<a title="Les Campus SGA " class="level2 havechild  item-link" href="#"><span class="menu-title">Les Campus SGA </span></a>	
+			<!-- open mega-content div -->
+		<div class="level3 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level3"><li class="level3 first ">
+	<a title="SGA Rabat" class="level3 first  item-link" href="/groupesga/campus-sga/ecole-marocaine-rabat"><span class="menu-title">SGA Rabat</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="SGA Casablanca" class="level3  item-link" href="/groupesga/campus-sga/ecole-marocaine-casablanca"><span class="menu-title">SGA Casablanca</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="SGA Marrakech - Ecole Reconnue par l'Etat" class="level3  item-link" href="/groupesga/campus-sga/ecole-marocaine-marrakech"><span class="menu-title">SGA Marrakech</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="SGA Fès - Ecole Reconnue par l'Etat" class="level3  item-link" href="/groupesga/campus-sga/ecole-marocaine-fes"><span class="menu-title">SGA Fès</span></a>	
+	</li>
+
+<li class="level3 last ">
+	<a title="SGA El Jadida " class="level3 last  item-link" href="/groupesga/campus-sga/ecole-marocaine-eljadida"><span class="menu-title">SGA El Jadida </span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level2 ">
+	<a title="Conseil scientifique" class="level2  item-link" href="/groupesga/conseil-scientifique-sga"><span class="menu-title">Conseil scientifique</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Espace presse" class="level2  item-link" href="/groupesga/espace-presse"><span class="menu-title">Espace presse</span></a>	
+	</li>
+
+<li class="level2 last ">
+	<a title="Fondation" class="level2 last  item-link" href="/groupesga/fondation"><span class="menu-title">Fondation</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level1 havechild ">
+	<a title="Formations" class="level1 havechild  item-link" href="#"><span class="menu-title">Formations</span></a>	
+			<!-- open mega-content div -->
+		<div class="level2 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level2"><li class="level2 first havechild ">
+	<a title="Formation à SGA Rabat" class="level2 first havechild  item-link" href="#"><span class="menu-title">Formation à SGA Rabat</span></a>	
+			<!-- open mega-content div -->
+		<div class="level3 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level3"><li class="level3 first ">
+	<a title="Ecole de Management" class="level3 first  item-link" href="/ecole-de-management-rabat/presentation-ecole-de-management-sga-rabat"><span class="menu-title">Ecole de Management</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="Ecole d’Ingénieur" class="level3  item-link" href="/ecole-d-ingenieur-rabat/presentation-ecole-ingenieur-sga-rabat"><span class="menu-title">Ecole d’Ingénieur</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="Masters internationaux" class="level3  item-link" href="/masters-internationaux-sga-rabat/presentation-masters-internationaux-sga-rabat"><span class="menu-title">Masters internationaux</span></a>	
+	</li>
+
+<li class="level3 last ">
+	<a title="Licences internationales" class="level3 last  item-link" href="/licences-internationales-sga-rabat/presentation-licences-internationales-sga-rabat"><span class="menu-title">Licences internationales</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level2 havechild ">
+	<a title="Formation à SGA Casablanca" class="level2 havechild  item-link" href="#"><span class="menu-title">Formation à SGA Casablanca</span></a>	
+			<!-- open mega-content div -->
+		<div class="level3 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level3"><li class="level3 first ">
+	<a title="Ecole de Management" class="level3 first  item-link" href="/ecole-de-management-casa/presentation-ecole-de-management-sga-casa"><span class="menu-title">Ecole de Management</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="Ecole d’Ingénierie" class="level3  item-link" href="/ecole-d-ingenierie-casa/presentation-ecole-ingenieur-sga-casa"><span class="menu-title">Ecole d’Ingénierie</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="Masters internationaux" class="level3  item-link" href="/masters-internationaux-sga-casa/presentation-masters-internationaux-sga-casa"><span class="menu-title">Masters internationaux</span></a>	
+	</li>
+
+<li class="level3 last ">
+	<a title="Licences internationales" class="level3 last  item-link" href="/licences-internationales-casa/presentation-licences-internationales-sga-casa"><span class="menu-title">Licences internationales</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level2 havechild ">
+	<a title="Formation à SGA Marrakech" class="level2 havechild  item-link" href="#"><span class="menu-title">Formation à SGA Marrakech</span></a>	
+			<!-- open mega-content div -->
+		<div class="level3 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level3"><li class="level3 first ">
+	<a title="Ecole de Management" class="level3 first  item-link" href="/ecole-de-management-sga-marrakech/presentation-ecole-de-management-sga-marrakech"><span class="menu-title">Ecole de Management</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="Ecole d’Ingénieur" class="level3  item-link" href="/ecole-d-ingenieur-sga-marrakech/presentation-ecole-ingenieur-sga-marrakech"><span class="menu-title">Ecole d’Ingénieur</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="Masters internationaux" class="level3  item-link" href="/masters-internationaux-sga-marrakech/presentation-masters-internationaux-sga-marrakech"><span class="menu-title">Masters internationaux</span></a>	
+	</li>
+
+<li class="level3 last ">
+	<a title="Licences internationales" class="level3 last  item-link" href="/licences-internationales-sga-marrakech/presentation-licences-internationales-sga-marrakech"><span class="menu-title">Licences internationales</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level2 havechild ">
+	<a title="Formation à SGA Fès" class="level2 havechild  item-link" href="#"><span class="menu-title">Formation à SGA Fès</span></a>	
+			<!-- open mega-content div -->
+		<div class="level3 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level3"><li class="level3 first ">
+	<a title="Ecole de Management" class="level3 first  item-link" href="/ecole-de-management-fes/presentation-ecole-de-management-sga-fes"><span class="menu-title">Ecole de Management</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="Ecole d’Ingénieur" class="level3  item-link" href="/ecole-d-ingenieur-sga-fes/presentation-ecole-ingenieur-sga-fes"><span class="menu-title">Ecole d’Ingénieur</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="Masters internationaux" class="level3  item-link" href="/masters-internationaux-sga-fes/presentation-masters-internationaux-sga-fes"><span class="menu-title">Masters internationaux</span></a>	
+	</li>
+
+<li class="level3 last ">
+	<a title="Licences internationales" class="level3 last  item-link" href="/licences-internationales-sga-fes/presentation-licences-internationales-sga-fes"><span class="menu-title">Licences internationales</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level2 havechild ">
+	<a title="Formation à SGA El Jadida" class="level2 havechild  item-link" href="#"><span class="menu-title">Formation à SGA El Jadida</span></a>	
+			<!-- open mega-content div -->
+		<div class="level3 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level3"><li class="level3 first ">
+	<a title="Ecole de Management" class="level3 first  item-link" href="/ecole-de-management-eljadida/presentation-ecole-de-management-sga-eljadida"><span class="menu-title">Ecole de Management</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="Ecole d’Ingénierie" class="level3  item-link" href="/ecole-d-ingenierie-eljadida/presentation-ecole-ingenieur-sga-eljadida"><span class="menu-title">Ecole d’Ingénierie</span></a>	
+	</li>
+
+<li class="level3 last ">
+	<a title="Licences internationales" class="level3 last  item-link" href="/licences-internationales-sga-eljadida/presentation-licences-internationales-sga-eljadida"><span class="menu-title">Licences internationales</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level2 last ">
+	<a title="Plaquettes SGA" class="level2 last  item-link" href="/formations/guides-etudes-sga"><span class="menu-title">Plaquettes SGA</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level1 havechild ">
+	<a title="Admission et inscription" class="level1 havechild  item-link" href="#"><span class="menu-title">Admission<br style=" margin-bottom:-10px; display:block; "/>inscription</span></a>	
+			<!-- open mega-content div -->
+		<div class="level2 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level2"><li class="level2 first ">
+	<a title="1ère année" class="level2 first  item-link" href="/admission-inscription-sga/inscription-sga-1eannee"><span class="menu-title">1ère année</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="2e, 3e ou 4e année" class="level2  item-link" href="/admission-inscription-sga/inscription-sga-admission"><span class="menu-title">2e, 3e ou 4e année</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Licences et Masters internationaux" class="level2  item-link" href="/admission-inscription-sga/formation-licence-master-maroc"><span class="menu-title">Licences et Masters internationaux</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Etudiants étrangers" class="level2  item-link" href="/admission-inscription-sga/etudiant-international"><span class="menu-title">Etudiants étrangers</span></a>	
+	</li>
+
+<li class="level2 last ">
+	<a title="Bourses" class="level2 last  item-link" href="/admission-inscription-sga/bourse-etude-sga"><span class="menu-title">Bourses</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level1 havechild ">
+	<a title="Recherche et innovation" class="level1 havechild  item-link" href="#"><span class="menu-title">Recherche<br style=" margin-bottom:-10px; display:block; "/>Innovation</span></a>	
+			<!-- open mega-content div -->
+		<div class="level2 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level2"><li class="level2 first ">
+	<a title="Présentation" class="level2 first  item-link" href="/recherche-innovation/sga-recherche-innovation"><span class="menu-title">Présentation</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Innovation" class="level2  item-link" href="/recherche-innovation/sga-innovation"><span class="menu-title">Innovation</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Groupe SGA - Recherche pôle Management" class="level2  item-link" href="/recherche-innovation/sga-innovation-management"><span class="menu-title">Recherche Pôle Management</span></a>	
+	</li>
+
+<li class="level2 last ">
+	<a title="Recherche Pôle Ingénierie" class="level2 last  item-link" href="/recherche-innovation/sga-innovation-ingenierie"><span class="menu-title">Recherche Pôle Ingénierie</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level1 havechild ">
+	<a title="Relations entreprises" class="level1 havechild  item-link" href="#"><span class="menu-title">Relations<br style=" margin-bottom:-10px; display:block; "/>Entreprises</span></a>	
+			<!-- open mega-content div -->
+		<div class="level2 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level2"><li class="level2 first ">
+	<a title="Partenariats entreprises" class="level2 first  item-link" href="/relations-entreprises/partenariats-entreprises"><span class="menu-title">Partenariats entreprises</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Séminaires" class="level2  item-link" href="/relations-entreprises/sga-seminaire-conference"><span class="menu-title">Séminaires</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Certifications" class="level2  item-link" href="/relations-entreprises/certifications-professionnelles"><span class="menu-title">Certifications</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Formations en temps aménagé" class="level2  item-link" href="/relations-entreprises/formation-temps-amenage"><span class="menu-title">Formations en temps aménagé</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Groupe SGA - Forum Solidaire Etudiants Entreprises" class="level2  item-link" href="/relations-entreprises/forum-entreprise"><span class="menu-title">Forum entreprise</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Offre de stages et d’emplois" class="level2  item-link" href="/relations-entreprises/offre-de-stages-et-emplois"><span class="menu-title">Offre de stages et d’emplois</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Anciens lauréats" class="level2  item-link" href="/relations-entreprises/sga-anciens-laureats"><span class="menu-title">Anciens lauréats</span></a>	
+	</li>
+
+<li class="level2 last ">
+	<a title="Témoignages" class="level2 last  item-link" href="/relations-entreprises/temoignages"><span class="menu-title">Témoignages</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level1 havechild ">
+	<a title="Relations internationales" class="level1 havechild  item-link" href="#"><span class="menu-title">Relations<br style=" margin-bottom:-10px; display:block; "/>Internationales</span></a>	
+			<!-- open mega-content div -->
+		<div class="level2 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level2"><li class="level2 first ">
+	<a title="Universités partenaires" class="level2 first  item-link" href="/sga-relations-internationales/sga-universites-partenaires"><span class="menu-title">Universités partenaires</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Licences internationales" class="level2  item-link" href="/sga-relations-internationales/sga-licences-internationales"><span class="menu-title">Licences internationales</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Masters internationaux" class="level2  item-link" href="/sga-relations-internationales/sga-masters-internationaux"><span class="menu-title">Masters internationaux</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Poursuite des études à l’étranger" class="level2  item-link" href="/sga-relations-internationales/etudier-a-etranger"><span class="menu-title">Poursuite des études à l’étranger</span></a>	
+	</li>
+
+<li class="level2 last ">
+	<a title="Etudiants étrangers" class="level2 last  item-link" href="https://sga.ma/admission-inscription-sga/etudiant-international"><span class="menu-title">Etudiants étrangers</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level1 havechild ">
+	<a title="Espace étudiant" class="level1 havechild  item-link" href="#"><span class="menu-title">Espace étudiant</span></a>	
+			<!-- open mega-content div -->
+		<div class="level2 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level2"><li class="level2 first havechild ">
+	<a title="Vie de l’étudiant" class="level2 first havechild  item-link" href="#"><span class="menu-title">Vie de l’étudiant</span></a>	
+			<!-- open mega-content div -->
+		<div class="level3 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level3"><li class="level3 first ">
+	<a title="Actions culturelles et artistiques" class="level3 first  item-link" href="/sga-espace-etudiant/vie-de-l-etudiant/actions-culturelles-et-artistiques"><span class="menu-title">Actions culturelles et artistiques</span></a>	
+	</li>
+
+<li class="level3 ">
+	<a title="Actions sportives et de loisirs" class="level3  item-link" href="/sga-espace-etudiant/vie-de-l-etudiant/actions-sportives-et-de-loisirs"><span class="menu-title">Actions sportives et de loisirs</span></a>	
+	</li>
+
+<li class="level3 last ">
+	<a title="Actions citoyennes" class="level3 last  item-link" href="/sga-espace-etudiant/vie-de-l-etudiant/actions-citoyennes"><span class="menu-title">Actions citoyennes</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level2 ">
+	<a title="Plateforme E-learning" class="level2  item-link" href="/sga-espace-etudiant/plateforme-e-learning"><span class="menu-title">Plateforme E-learning</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="SGA Direct" class="level2  item-link" href="/sga-espace-etudiant/sga-direct"><span class="menu-title">SGA Direct</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="Mémentos SGA" class="level2  item-link" href="https://www.sga.ma/mementos-bac" target="_blank"><span class="menu-title">Mémentos SGA</span></a>	
+	</li>
+
+<li class="level2 last ">
+	<a title="Livres SGA" class="level2 last  item-link" href="/sga-espace-etudiant/livres-sga-maroc"><span class="menu-title">Livres SGA</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+<li class="level1 last havechild ">
+	<a title="Inscription en ligne" class="level1 last havechild  item-link" href="#"><span class="menu-title">Inscription en ligne</span></a>	
+			<!-- open mega-content div -->
+		<div class="level2 menu mega-content" >
+			<div class="mega-content-inner clearfix" >
+			
+				
+									<div class="mega-col first one" >
+						<ul class="subnavi level2"><li class="level2 first ">
+	<a title="SGA Rabat" class="level2 first  item-link" href="/formulaire-inscription-rabat"><span class="menu-title">SGA Rabat</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="SGA Casablanca" class="level2  item-link" href="/formulaire-inscription-casablanca"><span class="menu-title">SGA Casablanca</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="SGA Marrakech" class="level2  item-link" href="/formulaire-inscription-marrakech"><span class="menu-title">SGA Marrakech</span></a>	
+	</li>
+
+<li class="level2 ">
+	<a title="SGA Fès" class="level2  item-link" href="/formulaire-inscription-fes"><span class="menu-title">SGA Fès</span></a>	
+	</li>
+
+<li class="level2 last ">
+	<a title="SGA El Jadida" class="level2 last  item-link" href="/formulaire-inscription-el-jadida"><span class="menu-title">SGA El Jadida</span></a>	
+	</li>
+
+</ul>					</div>
+							
+		</div>
+	</div>
+		</li>
+
+
+
+		
+	</script>
+	
+		<div id="yt-responivemenu" class="yt-resmenu ">
+			<button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar collapsed" type="button">
+				<i class="fa fa-bars"></i> Menu			</button>
+			<div id="resmenu_sidebar" class="nav-collapse collapse" >
+				<ul class="nav resmenu">
+				    <li class="haveChild level1"><a title="Groupe SGA" href='#'>Groupe SGA</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="Présentation" href='/groupesga/ecole-superieure-marocaine'>Présentation</a>        </li>
+        <li class="haveChild level2"><a title="Les Campus SGA " href='#'>Les Campus SGA </a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="SGA Rabat" href='/groupesga/campus-sga/ecole-marocaine-rabat'>SGA Rabat</a>        </li>
+        <li><a title="SGA Casablanca" href='/groupesga/campus-sga/ecole-marocaine-casablanca'>SGA Casablanca</a>        </li>
+        <li><a title="SGA Marrakech - Ecole Reconnue par l'Etat" href='/groupesga/campus-sga/ecole-marocaine-marrakech'>SGA Marrakech</a>        </li>
+        <li><a title="SGA Fès -  href='/groupesga/campus-sga/ecole-marocaine-fes'>SGA Fès</a>        </li>
+        <li><a title="SGA El Jadida " href='/groupesga/campus-sga/ecole-marocaine-eljadida'>SGA El Jadida </a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li><a title="Conseil scientifique" href='/groupesga/conseil-scientifique-sga'>Conseil scientifique</a>        </li>
+        <li><a title="Espace presse" href='/groupesga/espace-presse'>Espace presse</a>        </li>
+        <li><a title="Fondation" href='/groupesga/fondation'>Fondation</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li class="haveChild level1"><a title="Formations" href='#'>Formations</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li class="haveChild level2"><a title="Formation à SGA Rabat" href='#'>Formation à SGA Rabat</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="Ecole de Management" href='/ecole-de-management-rabat/presentation-ecole-de-management-sga-rabat'>Ecole de Management</a>        </li>
+        <li><a title="Ecole d’Ingénieur" href='/ecole-d-ingenieur-rabat/presentation-ecole-ingenieur-sga-rabat'>Ecole d’Ingénieur</a>        </li>
+        <li><a title="Masters internationaux" href='/masters-internationaux-sga-rabat/presentation-masters-internationaux-sga-rabat'>Masters internationaux</a>        </li>
+        <li><a title="Licences internationales" href='/licences-internationales-sga-rabat/presentation-licences-internationales-sga-rabat'>Licences internationales</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li class="haveChild level2"><a title="Formation à SGA Casablanca" href='#'>Formation à SGA Casablanca</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="Ecole de Management" href='/ecole-de-management-casa/presentation-ecole-de-management-sga-casa'>Ecole de Management</a>        </li>
+        <li><a title="Ecole d’Ingénierie" href='/ecole-d-ingenierie-casa/presentation-ecole-ingenieur-sga-casa'>Ecole d’Ingénierie</a>        </li>
+        <li><a title="Masters internationaux" href='/masters-internationaux-sga-casa/presentation-masters-internationaux-sga-casa'>Masters internationaux</a>        </li>
+        <li><a title="Licences internationales" href='/licences-internationales-casa/presentation-licences-internationales-sga-casa'>Licences internationales</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li class="haveChild level2"><a title="Formation à SGA Marrakech" href='#'>Formation à SGA Marrakech</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="Ecole de Management" href='/ecole-de-management-sga-marrakech/presentation-ecole-de-management-sga-marrakech'>Ecole de Management</a>        </li>
+        <li><a title="Ecole d’Ingénieur" href='/ecole-d-ingenieur-sga-marrakech/presentation-ecole-ingenieur-sga-marrakech'>Ecole d’Ingénieur</a>        </li>
+        <li><a title="Masters internationaux" href='/masters-internationaux-sga-marrakech/presentation-masters-internationaux-sga-marrakech'>Masters internationaux</a>        </li>
+        <li><a title="Licences internationales" href='/licences-internationales-sga-marrakech/presentation-licences-internationales-sga-marrakech'>Licences internationales</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li class="haveChild level2"><a title="Formation à SGA Fès" href='#'>Formation à SGA Fès</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="Ecole de Management" href='/ecole-de-management-fes/presentation-ecole-de-management-sga-fes'>Ecole de Management</a>        </li>
+        <li><a title="Ecole d’Ingénieur" href='/ecole-d-ingenieur-sga-fes/presentation-ecole-ingenieur-sga-fes'>Ecole d’Ingénieur</a>        </li>
+        <li><a title="Masters internationaux" href='/masters-internationaux-sga-fes/presentation-masters-internationaux-sga-fes'>Masters internationaux</a>        </li>
+        <li><a title="Licences internationales" href='/licences-internationales-sga-fes/presentation-licences-internationales-sga-fes'>Licences internationales</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li class="haveChild level2"><a title="Formation à SGA El Jadida" href='#'>Formation à SGA El Jadida</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="Ecole de Management" href='/ecole-de-management-eljadida/presentation-ecole-de-management-sga-eljadida'>Ecole de Management</a>        </li>
+        <li><a title="Ecole d’Ingénierie" href='/ecole-d-ingenierie-eljadida/presentation-ecole-ingenieur-sga-eljadida'>Ecole d’Ingénierie</a>        </li>
+        <li><a title="Licences internationales" href='/licences-internationales-sga-eljadida/presentation-licences-internationales-sga-eljadida'>Licences internationales</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li><a title="Plaquettes SGA" href='/formations/guides-etudes-sga'>Plaquettes SGA</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li class="haveChild level1"><a title="Admission et inscription" href='#'>Admission<br style=" margin-bottom:-10px; display:block; "/>inscription</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="1ère année" href='/admission-inscription-sga/inscription-sga-1eannee'>1ère année</a>        </li>
+        <li><a title="2e, 3e ou 4e année" href='/admission-inscription-sga/inscription-sga-admission'>2e, 3e ou 4e année</a>        </li>
+        <li><a title="Licences et Masters internationaux" href='/admission-inscription-sga/formation-licence-master-maroc'>Licences et Masters internationaux</a>        </li>
+        <li><a title="Etudiants étrangers" href='/admission-inscription-sga/etudiant-international'>Etudiants étrangers</a>        </li>
+        <li><a title="Bourses" href='/admission-inscription-sga/bourse-etude-sga'>Bourses</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li class="haveChild level1"><a title="Recherche et innovation" href='#'>Recherche<br style=" margin-bottom:-10px; display:block; "/>Innovation</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="Présentation" href='/recherche-innovation/sga-recherche-innovation'>Présentation</a>        </li>
+        <li><a title="Innovation" href='/recherche-innovation/sga-innovation'>Innovation</a>        </li>
+        <li><a title="Groupe SGA - Recherche pôle Management" href='/recherche-innovation/sga-innovation-management'>Recherche Pôle Management</a>        </li>
+        <li><a title="Recherche Pôle Ingénierie" href='/recherche-innovation/sga-innovation-ingenierie'>Recherche Pôle Ingénierie</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li class="haveChild level1"><a title="Relations entreprises" href='#'>Relations<br style=" margin-bottom:-10px; display:block; "/>Entreprises</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="Partenariats entreprises" href='/relations-entreprises/partenariats-entreprises'>Partenariats entreprises</a>        </li>
+        <li><a title="Séminaires" href='/relations-entreprises/sga-seminaire-conference'>Séminaires</a>        </li>
+        <li><a title="Certifications" href='/relations-entreprises/certifications-professionnelles'>Certifications</a>        </li>
+        <li><a title="Formations en temps aménagé" href='/relations-entreprises/formation-temps-amenage'>Formations en temps aménagé</a>        </li>
+        <li><a title="Groupe SGA - Forum Solidaire Etudiants Entreprises" href='/relations-entreprises/forum-entreprise'>Forum entreprise</a>        </li>
+        <li><a title="Offre de stages et d’emplois" href='/relations-entreprises/offre-de-stages-et-emplois'>Offre de stages et d’emplois</a>        </li>
+        <li><a title="Anciens lauréats" href='/relations-entreprises/sga-anciens-laureats'>Anciens lauréats</a>        </li>
+        <li><a title="Témoignages" href='/relations-entreprises/temoignages'>Témoignages</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li class="haveChild level1"><a title="Relations internationales" href='#'>Relations<br style=" margin-bottom:-10px; display:block; "/>Internationales</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="Universités partenaires" href='/sga-relations-internationales/sga-universites-partenaires'>Universités partenaires</a>        </li>
+        <li><a title="Licences internationales" href='/sga-relations-internationales/sga-licences-internationales'>Licences internationales</a>        </li>
+        <li><a title="Masters internationaux" href='/sga-relations-internationales/sga-masters-internationaux'>Masters internationaux</a>        </li>
+        <li><a title="Poursuite des études à l’étranger" href='/sga-relations-internationales/etudier-a-etranger'>Poursuite des études à l’étranger</a>        </li>
+        <li><a title="Etudiants étrangers" href='https://sga.ma/admission-inscription-sga/etudiant-international'>Etudiants étrangers</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li class="haveChild level1"><a title="Espace étudiant" href='#'>Espace étudiant</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li class="haveChild level2"><a title="Vie de l’étudiant" href='#'>Vie de l’étudiant</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="Actions culturelles et artistiques" href='/sga-espace-etudiant/vie-de-l-etudiant/actions-culturelles-et-artistiques'>Actions culturelles et artistiques</a>        </li>
+        <li><a title="Actions sportives et de loisirs" href='/sga-espace-etudiant/vie-de-l-etudiant/actions-sportives-et-de-loisirs'>Actions sportives et de loisirs</a>        </li>
+        <li><a title="Actions citoyennes" href='/sga-espace-etudiant/vie-de-l-etudiant/actions-citoyennes'>Actions citoyennes</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li><a title="Plateforme E-learning" href='/sga-espace-etudiant/plateforme-e-learning'>Plateforme E-learning</a>        </li>
+        <li><a title="SGA Direct" href='/sga-espace-etudiant/sga-direct'>SGA Direct</a>        </li>
+        <li><a title="Mémentos SGA" href='https://www.sga.ma/mementos-bac'>Mémentos SGA</a>        </li>
+        <li><a title="Livres SGA" href='/sga-espace-etudiant/livres-sga-maroc'>Livres SGA</a>        </li>
+    				</ul>
+				</div>
+			</li>
+            <li class="haveChild level1"><a title="Inscription en ligne" href='#'>Inscription en ligne</a>							<span class="menuress-toggle"></span>
+            				<div class="res-wrapnav">
+				<ul class="nav">
+			    <li><a title="SGA Rabat" href='/formulaire-inscription-rabat'>SGA Rabat</a>        </li>
+        <li><a title="SGA Casablanca" href='/formulaire-inscription-casablanca'>SGA Casablanca</a>        </li>
+        <li><a title="SGA Marrakech" href='/formulaire-inscription-marrakech'>SGA Marrakech</a>        </li>
+        <li><a title="SGA Fès" href='/formulaire-inscription-fes'>SGA Fès</a>        </li>
+        <li><a title="SGA El Jadida" href='/formulaire-inscription-el-jadida'>SGA El Jadida</a>        </li>
+    				</ul>
+				</div>
+			</li>
+        				</ul>
+			</div>
+			
+		</div>
+
+</script>        </div>
+				<div id="message"  class="col-sm-12 " >
+			
+<div class="row">
+<div class="col-lg-2">
+<p style="text-align: center;"><a href="/inscription"><img src="/images/inscription_sga.png" alt="inscriptions ouvertes à SGA" /></a></p>
+</div>
+<div class="col-lg-8"> </div>
+<div class="col-lg-2">
+<p style="text-align: center;">		<div class="moduletable">
+						
+</script>
+
+<div id="rssearch" class="rssearch_box">
+	<form id="frmSearch659" action="/component/rssearch/view-results/" method="post" accept-charset="utf-8" class="rsf_form">
+		
+		<div class="input-append">
+			<input type="text" id="rsf_inp659" name="search" class="rss_loop" onkeyup="searchSuggest659();" autocomplete="off" style="width:120px;" />
+			 <button type="submit" id="cmdSearch" class="btn">Recherche</button>		</div>
+		<div id="search_suggest659" class="rsfsuggestions" style="width:120px"></div>
+
+		<input type="hidden" name="task" value="search" />
+		<input type="hidden" name="module_id" value="659" />
+			</form>
+</div>		</div>
+	</p>
+</div>
+</div>
+
+		</div>
+									</div>
+						</div>
+						
+                    </nav>			<section id="content" class="  no-left  no-right block com_rsform">						
+						<div  class="container">
+
+							<div  class="row">
+								<aside id="content_left" class="col-md-3 col-sm-12 hidden"></aside> <div id="content_main" class="col-sm-12">			<div id="system-message-container">
+	</div>
+
+                  <div id="yt_component">
+<fieldset class="form-style-10" id="rsform_29_page_0">
+<h1>Formulaire de pré-inscription à l'SGA El Jadida</h1>
+		
+   <div class="inner-wrap" style="width:100%">
+        <label for="Formation" style="width:30%">Formation<strong class="formRequired" style="color:red;"> (*) </strong> : </label>
+				<select name="form[Formation][]" id="Formation" onchange="dynamic1(this,'Niveau');" class="select-field" style="width:50%">
+<option value=""></option><option value="Filière Ingénierie">Filière Ingénierie</option><option value="Filière Management">Filière Management</option><option value="Licences">Licences</option></select>	
+		<div><span><span id="component488" class="formNoError">Veuillez remplir le champ Formation.</span></span></div>
+</div> 
+	
+<div class="inner-wrap" style="width:100%">
+        <label for="Niveau" style="width:30%">Niveau<strong class="formRequired" style="color:red;"> (*) </strong> : </label>
+			<select name="form[Niveau][]" id="Niveau" class="select-field" style="width:50%" onchange="dynamic2('Formation','Niveau',this);"></select>			
+			<div><span><span id="component489" class="formNoError">Veuillez remplir le champ Niveau.</span></span></div>
+</div>
+
+<div id="myOption" name="myOption"  class="inner-wrap" style="width:100%" style="display:none; visibility: hidden;">
+        <label for="Option" style="width:30%">Option<strong class="formRequired" style="color:red;"> (*) </strong> : </label>
+			<select name="form[Option][]" id="Option" class="select-field" style="width:50%" ></select>			
+			<div><span><span id="component510" class="formNoError">Invalid Input</span></span></div>
+</div>
+   
+	<div class="inner-wrap" style="width:100%">
+		<label style="width:30%" for="Titre">Titre <strong> : </strong> </label>
+		<select name="form[Titre][]" id="Titre" class="select-field" style="width:50%"><option value="M">M</option><option value="Mlle">Mlle</option><option value="Mme">Mme</option></select>
+	</div>
+         <div class="inner-wrap" style="width:100%">
+	<label style="width:30%" for="nom">Votre nom<strong class="formRequired" style="color:red;"> (*) </strong> : </label>
+		<input value="" size="20" name="form[nom]" id="nom" class="input-field" style="width:50%;height:25px" type="text">
+		<div><span><span id="component491" class="formNoError">Veuillez remplir le champ Votre nom.</span></span></div>
+	</div>	
+	<div class="inner-wrap" style="width:100%">
+       <label style="width:30%" for="prenom">Votre Prénom<strong class="formRequired" style="color:red;"> (*) </strong> : </label>
+		<input value="" size="20" name="form[prenom]" id="prenom" class="input-field" style="width:50%;height:25px" type="text">
+		<div><span><span id="component492" class="formNoError">Veuillez remplir le champ Votre Prénom.</span></span></div>
+	</div>
+
+		
+	<div class="inner-wrap" style="width:100%">
+		<label style="width:30%" for="Pays">Pays <strong> : </strong> </label>
+		<select name="form[Pays][]" id="Pays" class="select-field" style="width:50%">
+<option value='Maroc'>Maroc</option>
+<option value='Angola'>Angola</option>
+<option value='Bénin'>Bénin</option>
+<option value='Botswana'>Botswana</option>
+<option value='Burkina Faso'>Burkina Faso</option>
+<option value='Cameroun'>Cameroun</option>
+<option value='République du Congo'>République du Congo</option>
+<option value='République démocratique du Congo'>République démocratique du Congo</option>
+<option value="Côte d’Ivoire">Côte d’Ivoire</option>
+<option value='Djibouti'>Djibouti</option>
+<option value='Gabon'>Gabon</option>
+<option value='Ghana'>Ghana</option>
+<option value='Guinée'>Guinée</option>
+<option value='Kenya'>Kenya</option>
+<option value='Liberia'>Liberia</option>
+<option value='Malawi'>Malawi</option>
+<option value='Mali'>Mali</option>
+<option value='Maroc'>Maroc</option>
+<option value='Mauritanie'>Mauritanie</option>
+<option value='Namibie'>Namibie</option>
+<option value='Niger'>Niger</option>
+<option value='Nigeria'>Nigeria</option>
+<option value='Ouganda'>Ouganda</option>
+<option value='Rwanda'>Rwanda</option>
+<option value='Sénégal'>Sénégal</option>
+<option value='Tchad'>Tchad</option>
+<option value='Togo'>Togo</option>
+<option value='Zambie'>Zambie</option>
+<option value='Autre'>Autre</option>
+</select>
+		<div><span><span id="component496" class="formNoError">veuillez remplir le champ obligatoire.</span></span></div>
+	</div>
+
+	<div class="inner-wrap" style="width:100%">
+		<label style="width:30%" for="Tel Mobile">Tél Mobile<strong class="formRequired" style="color:red;"> (*) </strong> : </label>
+		<label class="input-field" style="width:25%, height:25px"><select name="form[indicatif][]" id="indicatif" class="rsform-select-box form-control"><option value="+212">+212</option><option value="+20">+20</option><option value="+211">+211</option><option value="+212">+212</option><option value="+213">+213</option><option value="+216">+216</option><option value="+218">+218</option><option value="+220">+220</option><option value="+221">+221</option><option value="+222">+222</option><option value="+223">+223</option><option value="+224">+224</option><option value="+225">+225</option><option value="+226">+226</option><option value="+227">+227</option><option value="+228">+228</option><option value="+229">+229</option><option value="+230">+230</option><option value="+231">+231</option><option value="+232">+232</option><option value="+233">+233</option><option value="+234">+234</option><option value="+235">+235</option><option value="+236">+236</option><option value="+237">+237</option><option value="+238">+238</option><option value="+239">+239</option><option value="+240">+240</option><option value="+241">+241</option><option value="+242">+242</option><option value="+243">+243</option><option value="+244">+244</option><option value="+245">+245</option><option value="+246">+246</option><option value="+247">+247</option><option value="+248">+248</option><option value="+249">+249</option><option value="+250">+250</option><option value="+251">+251</option><option value="+252">+252</option><option value="+253">+253</option><option value="+254">+254</option><option value="+255">+255</option><option value="+256">+256</option><option value="+257">+257</option><option value="+258">+258</option><option value="+260">+260</option><option value="+261">+261</option><option value="+262">+262</option><option value="+263">+263</option><option value="+264">+264</option><option value="+265">+265</option><option value="+266">+266</option><option value="+267">+267</option><option value="+268">+268</option><option value="+269">+269</option><option value="+27">+27</option><option value="+290">+290</option><option value="+291">+291</option></select></label>&nbsp;&nbsp;<input value="" size="20" name="form[Tel Mobile]" id="Tel Mobile"  class="input-field" style="width:35%;height:25px" type="text">
+		<div ><span><span id="component505" class="formNoError">Veuillez remplir le champ Tél Mobile / Numéro téléphone mobile invalide.</span></span></div>
+	</div>
+	
+	<div class="inner-wrap" style="width:100%">
+		<label  style="width:30%" for="E-Mail">E-Mail<strong class="formRequired" style="color:red;"> (*) </strong> : </label>
+		<input value="" size="20" name="form[E-Mail]" id="E-Mail"  class="input-field" style="width:50%;height:25px" type="text">
+		<div ><span><span id="component506" class="formNoError">Veuillez remplir le champ E-Mail / Adresse mail invalide.</span></span></div>	
+	</div>
+		  			<!--<div class="form-group rsform-block rsform-block-gcaptcha{Gcaptcha:errorClass}">
+				<label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="{Gcaptcha:descriptionhtml}" for="Gcaptcha">{Gcaptcha:caption}<strong class="formRequired" style="color:red;">(*)</strong></label>
+				<div class="col-sm-9 formControls">
+					{Gcaptcha:body}
+					<span class="help-block formValidation">{Gcaptcha:validation}</span>
+				</div>
+			</div>-->
+          <div style="color:red;"><strong>Une fois que vous validez, votre inscription est enregistrée et vous recevrez une réponse dans les 24H.</strong></div>
+         <label  for="NB"><FONT color="red">Les champs marqués en * sont obligatoires</FONT></label>
+
+	<div class="button-section" align="right">
+		<label  data-toggle="tooltip"  title="" for="inscriptio"></label>
+                <button type="submit" name="form[inscriptio]" id="inscriptio" >Enregistrer votre pré-inscription</button>
+               <div ><span></span></div>		
+	</div>
+
+</fieldset>
+<input type="hidden" name="form[formId]" value="29"/></form>
+        </div>
+		</div> <aside id="content_right" class="col-md-3 col-sm-12 hidden"></aside> <div id="menu_mobile" class=""></div> 							</div >
+							<!--<div class="test">TOUTES NOS FILIÈRES SONT ACCRÉDITÉES PAR L'ÉTAT</div>-->
+							
+						</div >
+						
+                    </section>					<footer id="yt_footer" class="block">						<div class="container">
+							<div class="row">
+									<div id="yt_copyright" class="col-sm-12"  >
+					
+       
+		
+	
+					<div class="copyright">
+				Copyright © 2020 -			</div>
+				
+		
+		<div class="designby copyright_middle">
+			Tous droits réservés - <a target="_blank" title="Visit le site SGA !" href="https://www.sga.ma/">www.sga.ma</a>
+		</div>
+			
+        		
+                </div>
+									</div>
+						</div>
+						
+                    </footer>			        
+		
+    		<div id="yt_sticky_right" class="yt-slidePanel hidden-sm hidden-xs" >
+			<div class="yt-sticky">
+				    	
+	<div class="module ">
+		<span class="btn-special" title=""><span class="fa fa-pushpin"></span></span>
+		<div class="box-special">
+						<div class="clearfix">
+			<ul class="jj_sl_navigation jj_transition left"><li class="jj_sl_facebook"><a href="https://www.facebook.com/groupesga" target="_blank"><span class="jj_social_text">Suivez-nous sur Facebook</span><span class="jj_sprite jj_facebook"></span></a></li><li class="jj_sl_twitter"><a href="https://twitter.com/Groupesga" target="_blank"><span class="jj_social_text">Suivez-nous sur Twitter</span><span class="jj_sprite jj_twitter"></span></a></li><li class="jj_sl_youtube"><a href="https://www.youtube.com/groupesga" target="_blank"><span class="jj_social_text">Suivez-nous sur Youtube</span><span class="jj_sprite jj_youtube"></span></a></li><li class="jj_sl_linkedin"><a href="https://www.linkedin.com/company/groupe-sga" target="_blank"><span class="jj_social_text">Suivez-nous sur LinkedIn</span><span class="jj_sprite jj_linkedin"></span></a></li><li class="jj_sl_custom1"><a href="https://www.instagram.com/groupesga/" target="_blank"><span class="jj_social_text">Instagram</span><span class="jj_sprite_custom jj_custom1"></span></a></li></ul>			</div>
+		</div>
+	</div>
+    
+			</div>
+		</div>
+		
+        
+
+		
+		
+
+		
+	</script>
+
+
+	<a id="yt-totop" class="backtotop" href="#"><i class="fa fa-angle-up"></i> Top </a>
+    </script>
+
+	
+
+
+
+		
+	</div>
+
+				   </script></body>
+
+
+
+
+</script>
+
+
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=88738&fmt=gif" />
+</noscript>
+
+
+</html>
